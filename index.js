@@ -19,7 +19,7 @@ app.get("/products", function (req, res, next) {
 
 app.get("/attractions", function (req, res, next) {
   pool.query("SELECT * FROM attractions", function (err, rows, field) {
-    res.json(err);
+    res.json(rows);
   });
 });
 
